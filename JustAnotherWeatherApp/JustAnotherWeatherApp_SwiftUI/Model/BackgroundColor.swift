@@ -8,5 +8,5 @@
 import SwiftUI
 
 struct BackgroundColor {
-    static let matteYellow = Color(UIColor(red: 1.000, green: 0.835, blue: 0.000, alpha: 1.000))
+    static let matteBlack = Color(UIColor(red: 0.157, green: 0.157, blue: 0.169, alpha: 1.0))
 }

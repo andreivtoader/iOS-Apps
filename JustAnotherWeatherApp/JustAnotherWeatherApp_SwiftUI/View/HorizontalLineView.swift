@@ -11,7 +11,7 @@ struct HorizontalLineView: View {
     var body: some View {
         Divider()
             .frame(height: 2)
-            .overlay(.black)
+            .overlay(.white)
             .padding(.horizontal, 20)
     }
 }

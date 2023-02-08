@@ -16,13 +16,13 @@ struct TemperatureView: View {
                 .padding(.horizontal, 20)
                 .font(.system(size: 69))
                 .fontWeight(.bold)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             Text("\(api.weatherUI.description)")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
                 .font(.system(size: 35))
                 .fontWeight(.medium)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
         }
     }
 }

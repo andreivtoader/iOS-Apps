@@ -31,7 +31,7 @@ struct ContentView: View {
             Spacer()
         }
         .padding()
-        .background(BackgroundColor.matteYellow)
+        .background(BackgroundColor.matteBlack)
     }
 }
 

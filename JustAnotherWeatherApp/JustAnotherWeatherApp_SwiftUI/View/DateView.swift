@@ -14,13 +14,13 @@ struct DateView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
                 .fontWeight(.bold)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             Text("\(Date().dayOfMonth()!) \(Date().monthOfYear()!)")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
         }
-        .background(BackgroundColor.matteYellow)
+        .background(BackgroundColor.matteBlack)
     }
 }
 

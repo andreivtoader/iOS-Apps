@@ -24,7 +24,7 @@ struct SearchBarView: View {
                         .fontWeight(.bold)
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .center)
-                        .foregroundColor(.black)
+                        .foregroundColor(.white)
                         .onAppear {
                             if firstRequest {
                                 Task {
@@ -42,10 +42,11 @@ struct SearchBarView: View {
                 
                 HStack {
                     if self.show {
-                        Image("search_in_cloud")
+                        Image(systemName: "magnifyingglass")
+                            .foregroundColor(.white)
                         
-                        TextField("", text: self.$textfieldText, prompt: Text("Search City").foregroundColor(.black))
-                            .foregroundColor(.black)
+                        TextField("", text: self.$textfieldText, prompt: Text("Search City").foregroundColor(.white))
+                            .foregroundColor(.white)
                             .onSubmit {
                                 currentCityName = textfieldText
                                 textfieldText = ""
@@ -63,7 +64,7 @@ struct SearchBarView: View {
                             
                         } label: {
                             Image(systemName: "xmark")
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                         }
                         .padding(.horizontal, 8)
                     } else {
@@ -74,8 +75,8 @@ struct SearchBarView: View {
                             }
                             
                         } label: {
-                            Image("search_in_cloud")
-                                .foregroundColor(.black)
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.white)
                                 .padding(10)
                         }
                         .padding(.horizontal, 8)
@@ -88,7 +89,7 @@ struct SearchBarView: View {
             .padding(.horizontal)
             .padding(.bottom, 10)
         }
-        .background(BackgroundColor.matteYellow)
+        .background(BackgroundColor.matteBlack)
 
     }
 }

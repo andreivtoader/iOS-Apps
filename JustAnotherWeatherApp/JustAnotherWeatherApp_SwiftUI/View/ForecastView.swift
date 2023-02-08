@@ -14,17 +14,17 @@ struct ForecastView: View {
         HStack {
             Text("\(api.weatherUI.humidity)%")
                 .padding(.leading, 20)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             Text("Humidity")
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             
             Spacer()
                        
             Text("\(api.weatherUI.wind)km/h")
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             Text("Wind")
                 .padding(.trailing, 20)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
         }
     }
 }
