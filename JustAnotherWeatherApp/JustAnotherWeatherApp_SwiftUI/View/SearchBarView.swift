@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchBarView: View {
     @ObservedObject var api: WeatherAPI
+    @Environment(\.scenePhase)  private var scenePhase
     
     @State private var show = false
     @State private var currentCityName = ""
@@ -16,7 +17,6 @@ struct SearchBarView: View {
     @State private var firstRequest = true
     
     var body: some View {
-        
         VStack(spacing: 0) {
             HStack {
                 if !self.show {
@@ -25,16 +25,6 @@ struct SearchBarView: View {
                         .font(.title)
                         .frame(maxWidth: .infinity, alignment: .center)
                         .foregroundColor(.white)
-                        .onAppear {
-                            if firstRequest {
-                                Task {
-                                    try await api.getInitialWeatherAsync()
-                                }
-                                firstRequest = false
-                            } else {
-                                api.weatherUI.cityName = currentCityName
-                            }
-                        }
                 }
                 
                 
@@ -52,6 +42,7 @@ struct SearchBarView: View {
                                 textfieldText = ""
                                 Task {
                                     try await api.getWeatherAsync(for: currentCityName)
+                                    api.weatherUI.cityName = currentCityName
                                 }
                                 self.show.toggle()
                             }
@@ -61,7 +52,6 @@ struct SearchBarView: View {
                                 currentCityName = api.weatherUI.cityName
                                 self.show.toggle()
                             }
-                            
                         } label: {
                             Image(systemName: "xmark")
                                 .foregroundColor(.white)
@@ -90,7 +80,21 @@ struct SearchBarView: View {
             .padding(.bottom, 10)
         }
         .background(BackgroundColor.matteBlack)
-
+        .onChange(of: scenePhase) { newPhase in
+            switch newPhase {
+            case .active:
+                print("scene is now active")
+                Task {
+                    try await api.getInitialWeatherAsync()
+                }
+            case .inactive:
+                print("scene is now inactive")
+            case .background:
+                print("scene is now in the background")
+            @unknown default:
+                print("Apple must have added something new")
+            }
+        }
     }
 }
 
