@@ -27,7 +27,6 @@ struct SearchBarView: View {
                         .foregroundColor(.white)
                 }
                 
-                
                 Spacer(minLength: 0)
                 
                 HStack {
@@ -74,7 +73,6 @@ struct SearchBarView: View {
                 }
                 .padding(self.show ? 10: 0)
                 .cornerRadius(20)
-
             }
             .padding(.horizontal)
             .padding(.bottom, 10)

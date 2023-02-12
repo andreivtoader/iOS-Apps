@@ -26,6 +26,10 @@
 		392BC5E6298EFB9F008002E1 /* WeatherUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392BC5E5298EFB9E008002E1 /* WeatherUI.swift */; };
 		392BC5E8298EFE1C008002E1 /* Date+dayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392BC5E7298EFE1C008002E1 /* Date+dayOfWeek.swift */; };
 		392BC5EA298FC51E008002E1 /* CurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392BC5E9298FC51E008002E1 /* CurrentLocation.swift */; };
+		39D4CC932999078D00E7A56D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4CC922999078D00E7A56D /* Endpoint.swift */; };
+		39D4CC952999097200E7A56D /* WeatherEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4CC942999097200E7A56D /* WeatherEndpoint.swift */; };
+		39D4CC9729990FDB00E7A56D /* Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4CC9629990FDB00E7A56D /* Units.swift */; };
+		39D4CC992999105C00E7A56D /* GeocodeEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D4CC982999105C00E7A56D /* GeocodeEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		392BC5E5298EFB9E008002E1 /* WeatherUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUI.swift; sourceTree = "<group>"; };
 		392BC5E7298EFE1C008002E1 /* Date+dayOfWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+dayOfWeek.swift"; sourceTree = "<group>"; };
 		392BC5E9298FC51E008002E1 /* CurrentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocation.swift; sourceTree = "<group>"; };
+		39D4CC922999078D00E7A56D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		39D4CC942999097200E7A56D /* WeatherEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEndpoint.swift; sourceTree = "<group>"; };
+		39D4CC9629990FDB00E7A56D /* Units.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Units.swift; sourceTree = "<group>"; };
+		39D4CC982999105C00E7A56D /* GeocodeEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,10 +176,14 @@
 		392BC5DA298ED248008002E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				392BC5CF298EC962008002E1 /* BackgroundColor.swift */,
-				392BC5DB298EE57E008002E1 /* WeatherAPI.swift */,
 				392BC5DF298EE706008002E1 /* CityJSON.swift */,
 				392BC5E1298EE7F7008002E1 /* WeatherJSON.swift */,
+				39D4CC922999078D00E7A56D /* Endpoint.swift */,
+				39D4CC942999097200E7A56D /* WeatherEndpoint.swift */,
+				39D4CC9629990FDB00E7A56D /* Units.swift */,
+				39D4CC982999105C00E7A56D /* GeocodeEndpoint.swift */,
+				392BC5CF298EC962008002E1 /* BackgroundColor.swift */,
+				392BC5DB298EE57E008002E1 /* WeatherAPI.swift */,
 				392BC5E5298EFB9E008002E1 /* WeatherUI.swift */,
 				392BC5E7298EFE1C008002E1 /* Date+dayOfWeek.swift */,
 				392BC5E9298FC51E008002E1 /* CurrentLocation.swift */,
@@ -309,10 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D4CC9729990FDB00E7A56D /* Units.swift in Sources */,
+				39D4CC992999105C00E7A56D /* GeocodeEndpoint.swift in Sources */,
 				392BC5E6298EFB9F008002E1 /* WeatherUI.swift in Sources */,
+				39D4CC952999097200E7A56D /* WeatherEndpoint.swift in Sources */,
 				392BC5DC298EE57E008002E1 /* WeatherAPI.swift in Sources */,
 				392BC5D2298ECB7A008002E1 /* DateView.swift in Sources */,
 				392BC5A4298EBC9F008002E1 /* ContentView.swift in Sources */,
+				39D4CC932999078D00E7A56D /* Endpoint.swift in Sources */,
 				392BC5D4298ECDD8008002E1 /* HorizontalLineView.swift in Sources */,
 				392BC5E2298EE7F7008002E1 /* WeatherJSON.swift in Sources */,
 				392BC5CC298EBCED008002E1 /* SearchBarView.swift in Sources */,

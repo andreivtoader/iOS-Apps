@@ -11,12 +11,13 @@ class WeatherAPI: ObservableObject {
     
     @Published var weatherUI = WeatherUI()
     
-    private let key = "65d1a094019093a87b527872f7725aa7"
     private let currentLocation = CurrentLocation()
     
     func getInitialWeatherAsync() async throws {
-        let url = urlBasedOnLatitudeAndLongitude(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
-        print(url)
+        guard let url = WeatherEndpoint(latitude: currentLocation.latitude, longitude: currentLocation.longitude).url else {
+            print("Could not create the WeatherEndpoint url...")
+            return
+        }
         
         let request = URLRequest(url: url)
         let (data, _) = try await URLSession.shared.data(for: request)
@@ -27,8 +28,10 @@ class WeatherAPI: ObservableObject {
     
     func getWeatherAsync(for cityName: String) async throws {
         let cities = try await searchCityGeocodeAsync(cityName: cityName)
-        let url = self.urlBasedOnLatitudeAndLongitude(latitude: cities.first?.lat ?? 0.0, longitude: cities.first?.lon ?? 0.0)
-        print(url)
+        guard let url = WeatherEndpoint(latitude: cities.first?.lat ?? 0.0, longitude: cities.first?.lon ?? 0.0).url else {
+            print("Could not create the WeatherEndpoint url...")
+            return
+        }
         
         let request = URLRequest(url: url)
         let (data, _) = try await URLSession.shared.data(for: request)
@@ -37,21 +40,11 @@ class WeatherAPI: ObservableObject {
         publishWeatherResults(weather: weatherJSON, updateCityName: false)
     }
     
-    private func urlBasedOnLatitudeAndLongitude(latitude: Double, longitude: Double) -> URL {
-        let weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&units=metric&appid=\(self.key)"
-        
-        return URL(string: weatherURL)!
-    }
-    
-    private func urlBasedOnCityName(cityName: String) -> URL {
-        let name = cityName.trimmingCharacters(in: .whitespacesAndNewlines)
-        let geocodingURL = "https://api.openweathermap.org/geo/1.0/direct?q=\(name)&limit=1&appid=\(key)"
-        
-        return URL(string: geocodingURL)!
-    }
-    
     private func searchCityGeocodeAsync(cityName: String) async throws -> [CityJSON] {
-        let url = urlBasedOnCityName(cityName: cityName)
+        guard let url = GeocodeEndpoint(cityName: cityName).url else {
+            print("Could not create the GeocodeEndpoint url...")
+            return []
+        }
         
         let request = URLRequest(url: url)
         let (data, _) = try await URLSession.shared.data(for: request)
