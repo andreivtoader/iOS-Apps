@@ -21,6 +21,7 @@ struct DateView: View {
                 .foregroundColor(.white)
         }
         .background(BackgroundColor.matteBlack)
+        .padding(.bottom, 10)
     }
 }
 

@@ -13,6 +13,7 @@ struct HorizontalLineView: View {
             .frame(height: 2)
             .overlay(.white)
             .padding(.horizontal, 20)
+            .padding(.bottom, 10)
     }
 }
 

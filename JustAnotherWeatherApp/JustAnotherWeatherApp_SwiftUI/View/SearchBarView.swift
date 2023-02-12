@@ -77,11 +77,11 @@ struct SearchBarView: View {
             .padding(.horizontal)
             .padding(.bottom, 10)
         }
+        .padding(.bottom, 30)
         .background(BackgroundColor.matteBlack)
         .onChange(of: scenePhase) { newPhase in
             switch newPhase {
             case .active:
-                print("scene is now active")
                 Task {
                     try await api.getInitialWeatherAsync()
                 }

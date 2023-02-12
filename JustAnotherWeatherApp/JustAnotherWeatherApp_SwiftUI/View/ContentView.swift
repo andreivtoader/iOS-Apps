@@ -11,24 +11,33 @@ struct ContentView: View {
     
     @ObservedObject var weatherAPI = WeatherAPI()
     
+    // Just for demo of tab view
+    let items: [Int] =  [1,2,3]
+    
     var body: some View {
         VStack {
             SearchBarView(api: weatherAPI)
-                .padding(.bottom, 30)
-            DateView()
             
-            HorizontalLineView()
-            Spacer()
-            
-            TemperatureView(api: weatherAPI)
-            
-            Spacer()
-            HorizontalLineView()
-                .padding(.bottom, 30)
-            
-            ForecastView(api: weatherAPI)
-
-            Spacer()
+            TabView {
+                // TODO: For more than current weather information, most APIs require $$$, or limit you to 50 calls per day. Sad reacts only.
+                ForEach(items, id: \.self) { index in
+                    VStack {
+                        DateView()
+                        HorizontalLineView()
+                        
+                        Spacer()
+                        
+                        TemperatureView(api: weatherAPI)
+                        
+                        Spacer()
+                        
+                        HorizontalLineView()
+                        ForecastView(api: weatherAPI)
+                        
+                        Spacer()
+                    }
+                }
+            }.tabViewStyle(.page)
         }
         .padding()
         .background(BackgroundColor.matteBlack)
