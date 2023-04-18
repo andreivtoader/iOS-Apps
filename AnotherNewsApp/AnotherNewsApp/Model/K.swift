@@ -15,4 +15,5 @@ struct K {
     static let interestsDescription = "Select your interests:"
     static let noItemsSelectedText = "Please select at least four topics..."
     static let minimumTopicsSelected = 4
+    static let selectedTopicsStorageFile = "selectedTopics.data"
 }

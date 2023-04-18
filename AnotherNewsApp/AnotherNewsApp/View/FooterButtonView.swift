@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FooterButtonView: View {
     let title: String
+    
     var body: some View {
         Text(title)
             .frame(maxWidth: .infinity)

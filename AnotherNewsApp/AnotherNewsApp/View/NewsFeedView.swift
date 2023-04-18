@@ -8,27 +8,42 @@
 import SwiftUI
 
 struct NewsFeedView: View {
-    @EnvironmentObject var manager: NewsManager
-    @Binding var currentTopics: [Topic]
+    @ObservedObject var manager: NewsManager
     
     var body: some View {
         VStack {
-            TabBarView(menuTopicItems: $currentTopics)
-                .environmentObject(manager)
-            Text("")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding()
-                .background(Color(uiColor: .systemGray6))
-                .task {
-                    let topic = Topic(rawValue: currentTopics.first!.rawValue)!
-                    await manager.getHeadlines(for: topic)
+            TabBarView(manager: manager)
+
+            NavigationStack {
+                List {
+                    ForEach(manager.filteredArticles) { article in
+                        NavigationLink {
+                            ArticleDetailsView(article: article)
+                        } label: {
+                            ArticleListView(filteredArticle: article)
+                                .padding()
+                        }
+                        .tint(.accentColor)
+                        
+                    }
                 }
+                .listStyle(.sidebar)
+            }
+                
         }
+        .task {
+            let topic = Topic(rawValue: manager.selectedTopics[manager.selectedTopicIndex].topic.rawValue)!
+            let selectableTopic = SelectableTopic(topic: topic, isSelected: false)
+            
+            await manager.getHeadlines(for: selectableTopic)
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle(K.appTitle)
     }
 }
 
-struct NewsPulseFeedView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct NewsPulseFeedView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WelcomeView(selectedTopics: .constant(K.sampleData))
+//    }
+//}

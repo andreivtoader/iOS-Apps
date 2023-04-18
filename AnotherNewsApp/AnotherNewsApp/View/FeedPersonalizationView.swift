@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct FeedPersonalizationView: View {
-    @EnvironmentObject var manager: NewsManager
-    @State private var selectedItems: [Topic] = []
+    @ObservedObject var manager: NewsManager
     
     var body: some View {
         VStack {
@@ -21,31 +20,31 @@ struct FeedPersonalizationView: View {
                         .padding()
                     
                     LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                        ForEach(Topic.allCases, id: \.rawValue) { topic in
-                            InterestsSelectionView(topic: topic, items: $selectedItems)
+                        ForEach(NewsManager.allTopics) { topic in
+                            InterestsSelectionView(selectableTopic: topic, manager: manager)
                         }
                     }
                     .padding()
                     
-                    Text(selectedItems.count < K.minimumTopicsSelected  ? K.noItemsSelectedText : "")
+                    Text(manager.selectedTopics.count < K.minimumTopicsSelected  ? K.noItemsSelectedText : "")
                         .padding()
                 }
             }
             
             NavigationLink {
-                NewsFeedView(currentTopics: $selectedItems)
-                    .environmentObject(manager)
+                NewsFeedView(manager: manager)
             } label: {
                 FooterButtonView(title: K.continueButton)
             }
-            .disabled(selectedItems.count < K.minimumTopicsSelected)
-                 
+            .disabled(manager.selectedTopics.count < K.minimumTopicsSelected)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle(K.appTitle)
     }
 }
 
-struct FeedPersonalizationView_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedPersonalizationView()
-    }
-}
+//struct FeedPersonalizationView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WelcomeView(selectedTopics: .constant(K.sampleData))
+//    }
+//}

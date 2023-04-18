@@ -8,7 +8,7 @@
 import Foundation
 
 struct NewsEndpoint: Endpoint {
-    let topic: Topic
+    let selectableTopic: SelectableTopic
     
     var host: String {
         return "newsapi.org"
@@ -24,7 +24,7 @@ struct NewsEndpoint: Endpoint {
     
     var queryItems: [URLQueryItem] {
         return [
-            URLQueryItem(name: "q", value: self.topic.rawValue),
+            URLQueryItem(name: "q", value: self.selectableTopic.topic.rawValue),
             URLQueryItem(name: "apiKey", value: self.key)
         ]
     }

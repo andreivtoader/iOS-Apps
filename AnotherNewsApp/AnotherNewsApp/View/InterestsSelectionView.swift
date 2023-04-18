@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct InterestsSelectionView: View {
-    let topic: Topic
-    @Binding var items:[Topic]
+    let selectableTopic: SelectableTopic
     
+    @ObservedObject var manager: NewsManager
     @State private var isSelected = false
     
     var body: some View {
-        Text(topic.rawValue)
+        Text(selectableTopic.topic.rawValue)
             .padding()
             .background(RoundedRectangle(cornerRadius: 30, style: .continuous).fill(isSelected ? Color.black : Color.white))
             .overlay(RoundedRectangle(cornerRadius: 30)
@@ -24,20 +24,25 @@ struct InterestsSelectionView: View {
                 isSelected.toggle()
                 
                 if isSelected {
-                    items.append(topic)
+                    let buffer = SelectableTopic(topic: selectableTopic.topic, isSelected: self.isSelected)
+                    manager.selectedTopics.append(buffer)
                 }
                 else {
-                    items.removeAll {$0 == topic}
+                    manager.selectedTopics.removeAll {$0 == selectableTopic}
                 }
             }
             .foregroundColor(isSelected ? Color.white : Color.black)
+            .task {
+                let selected = manager.isTopicSelected(selectableTopic)
+                self.isSelected = selected
+            }
             
     }
 }
 
-struct InterestsSelectionView_Previews: PreviewProvider {
-    @State static var items: [Topic] = []
-    static var previews: some View {
-        InterestsSelectionView(topic: Topic.beauty, items: $items)
-    }
-}
+//struct InterestsSelectionView_Previews: PreviewProvider {
+//    @State static var items: [Topic] = []
+//    static var previews: some View {
+//        InterestsSelectionView(topic: Topic.beauty, items: $items)
+//    }
+//}

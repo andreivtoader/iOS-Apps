@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @ObservedObject var manager = NewsManager()
+    @ObservedObject var manager: NewsManager
     
     var body: some View {
         NavigationStack {
@@ -28,8 +28,7 @@ struct WelcomeView: View {
                 }
                 
                 NavigationLink(destination: {
-                    FeedPersonalizationView()
-                        .environmentObject(manager)
+                    FeedPersonalizationView(manager: manager)
                 }, label: {
                     FooterButtonView(title: K.continueButton)
                 })
@@ -40,7 +39,8 @@ struct WelcomeView: View {
 }
 
 struct WelcomeView_Previews: PreviewProvider {
+    static var apiManager = NewsManager()
     static var previews: some View {
-        WelcomeView()
+        WelcomeView(manager: apiManager)
     }
 }

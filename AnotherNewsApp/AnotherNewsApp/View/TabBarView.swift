@@ -8,36 +8,36 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @EnvironmentObject var manager: NewsManager
-    @Binding var menuTopicItems: [Topic]
-    @State private var selectedIndex = 0
+    @ObservedObject var manager: NewsManager
     
     var body: some View {
         ScrollViewReader { scrollView in
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(menuTopicItems.indices, id: \.self) { index in
-                        Text(menuTopicItems[index].rawValue)
+                    ForEach(manager.selectedTopics.indices, id: \.self) { index in
+                        Text(manager.selectedTopics[index].topic.rawValue)
                             .font(.subheadline)
                             .padding(.horizontal)
                             .padding(.vertical, 4)
-                            .foregroundColor(selectedIndex == index ? .white : .black)
-                            .background(Capsule().foregroundColor(selectedIndex == index ? .black : .clear))
+                            .foregroundColor(manager.selectedTopicIndex == index ? .white : .black)
+                            .background(Capsule().foregroundColor(manager.selectedTopicIndex == index ? .black : .clear))
                             .onTapGesture {
                                 withAnimation(.easeInOut) {
-                                    selectedIndex = index
+                                    manager.selectedTopicIndex = index
                                 }
                                 
                                 Task {
-                                    let topic = Topic(rawValue: menuTopicItems[index].rawValue)!
-                                    await manager.getHeadlines(for: topic)
+                                    let topic = Topic(rawValue: manager.selectedTopics[manager.selectedTopicIndex].topic.rawValue)!
+                                    let selectableTopic = SelectableTopic(topic: topic, isSelected: false)
+                                    
+                                    await manager.getHeadlines(for: selectableTopic)
                                 }
                             }
                     }
                 }
             }
             .padding()
-            .onChange(of: selectedIndex) { index in
+            .onChange(of: manager.selectedTopicIndex) { index in
                 withAnimation {
                     scrollView.scrollTo(index, anchor: .center)
                 }
@@ -47,8 +47,8 @@ struct TabBarView: View {
     }
 }
 
-struct TabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct TabBarView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        WelcomeView(selectedTopics: .constant(K.sampleData))
+//    }
+//}

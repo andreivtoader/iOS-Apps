@@ -11,7 +11,15 @@ struct ResponseJSON: Codable {
     var articles: [Article] = []
 }
 
-struct Article: Codable {
+struct Article: Codable, Identifiable {
+    var id: String {
+        if let title = title {
+            return title
+        }
+        else {
+            return ""
+        }
+    }
     var source: Source
     var author: String?
     var title: String?

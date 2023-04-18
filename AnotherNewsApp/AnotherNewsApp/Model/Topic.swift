@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Topic: String, CaseIterable {
+enum Topic: String, CaseIterable, Codable {
     case news = "news"
     case sport = "sport"
     case tech = "tech"
