@@ -40,8 +40,9 @@ struct ArticleDetailsView: View {
     }
 }
 
-//struct ArticleDetailsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WelcomeView(selectedTopics: .constant(K.sampleData))
-//    }
-//}
+struct ArticleDetailsView_Previews: PreviewProvider {
+    static var apiManager = NewsManager()
+    static var previews: some View {
+        WelcomeView(manager: apiManager)
+    }
+}

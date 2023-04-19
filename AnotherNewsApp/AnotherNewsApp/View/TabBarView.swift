@@ -48,8 +48,9 @@ struct TabBarView: View {
     }
 }
 
-//struct TabBarView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WelcomeView(selectedTopics: .constant(K.sampleData))
-//    }
-//}
+struct TabBarView_Previews: PreviewProvider {
+    static var apiManager = NewsManager()
+    static var previews: some View {
+        WelcomeView(manager: apiManager)
+    }
+}

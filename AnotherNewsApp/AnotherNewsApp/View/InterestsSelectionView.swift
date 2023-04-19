@@ -31,9 +31,9 @@ struct InterestsSelectionView: View {
     }
 }
 
-//struct InterestsSelectionView_Previews: PreviewProvider {
-//    @State static var items: [Topic] = []
-//    static var previews: some View {
-//        InterestsSelectionView(topic: Topic.beauty, items: $items)
-//    }
-//}
+struct InterestsSelectionView_Previews: PreviewProvider {
+    static var apiManager = NewsManager()
+    static var previews: some View {
+        WelcomeView(manager: apiManager)
+    }
+}

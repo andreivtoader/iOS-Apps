@@ -38,8 +38,9 @@ struct FeedPersonalizationView: View {
     }
 }
 
-//struct FeedPersonalizationView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        WelcomeView(selectedTopics: .constant(K.sampleData))
-//    }
-//}
+struct FeedPersonalizationView_Previews: PreviewProvider {
+    static var apiManager = NewsManager()
+    static var previews: some View {
+        WelcomeView(manager: apiManager)
+    }
+}
