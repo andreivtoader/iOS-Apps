@@ -10,9 +10,15 @@ import SwiftUI
 struct InterestsSelectionView: View {
     @ObservedObject var manager: NewsManager
     
+    private let threeColumnGrid = [
+        GridItem(.flexible(), spacing: 35),
+        GridItem(.flexible(), spacing: 35),
+        GridItem(.flexible(), spacing: 35)
+    ]
+    
     var body: some View {
         
-        LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
+        LazyVGrid(columns: threeColumnGrid) {
             ForEach($manager.allTopics) { $topic in
                 Text(topic.topic.rawValue)
                     .padding()

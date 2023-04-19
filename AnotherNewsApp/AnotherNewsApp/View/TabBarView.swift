@@ -10,7 +10,6 @@ import SwiftUI
 struct TabBarView: View {
     @ObservedObject var manager: NewsManager
     @Binding var currentTabSelection: Int
-    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         ScrollViewReader { scrollView in
