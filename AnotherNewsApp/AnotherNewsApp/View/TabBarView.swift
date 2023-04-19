@@ -9,25 +9,26 @@ import SwiftUI
 
 struct TabBarView: View {
     @ObservedObject var manager: NewsManager
+    @Binding var currentTabSelection: Int
     
     var body: some View {
         ScrollViewReader { scrollView in
             ScrollView(.horizontal) {
                 HStack {
-                    ForEach(manager.selectedTopics.indices, id: \.self) { index in
-                        Text(manager.selectedTopics[index].topic.rawValue)
+                    ForEach(manager.selectedTopics().indices, id: \.self) { index in
+                        Text(manager.selectedTopics()[index].topic.rawValue)
                             .font(.subheadline)
                             .padding(.horizontal)
                             .padding(.vertical, 4)
-                            .foregroundColor(manager.selectedTopicIndex == index ? .white : .black)
-                            .background(Capsule().foregroundColor(manager.selectedTopicIndex == index ? .black : .clear))
+                            .foregroundColor(currentTabSelection == index ? .white : .black)
+                            .background(Capsule().foregroundColor(currentTabSelection == index ? .black : .clear))
                             .onTapGesture {
                                 withAnimation(.easeInOut) {
-                                    manager.selectedTopicIndex = index
+                                    currentTabSelection = index
                                 }
                                 
                                 Task {
-                                    let topic = Topic(rawValue: manager.selectedTopics[manager.selectedTopicIndex].topic.rawValue)!
+                                    let topic = Topic(rawValue: manager.selectedTopics()[currentTabSelection].topic.rawValue)!
                                     let selectableTopic = SelectableTopic(topic: topic, isSelected: false)
                                     
                                     await manager.getHeadlines(for: selectableTopic)
@@ -37,7 +38,7 @@ struct TabBarView: View {
                 }
             }
             .padding()
-            .onChange(of: manager.selectedTopicIndex) { index in
+            .onChange(of: currentTabSelection) { index in
                 withAnimation {
                     scrollView.scrollTo(index, anchor: .center)
                 }

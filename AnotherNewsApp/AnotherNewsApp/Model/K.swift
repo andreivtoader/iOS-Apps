@@ -16,4 +16,5 @@ struct K {
     static let noItemsSelectedText = "Please select at least four topics..."
     static let minimumTopicsSelected = 4
     static let selectedTopicsStorageFile = "selectedTopics.data"
+    static let EMPTY_STRING = ""
 }

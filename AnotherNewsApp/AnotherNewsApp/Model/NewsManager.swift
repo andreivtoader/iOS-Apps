@@ -12,8 +12,24 @@ class NewsManager: ObservableObject {
     private var newsResponse = ResponseJSON()
     
     @Published var filteredArticles = [ArticleUI]()
-    @Published var selectedTopics = [SelectableTopic]()
-    @Published var selectedTopicIndex = 0
+    @Published var allTopics: [SelectableTopic] = [
+        SelectableTopic(topic: Topic.news, isSelected: false),
+        SelectableTopic(topic: Topic.sport, isSelected: false),
+        SelectableTopic(topic: Topic.tech, isSelected: false),
+        SelectableTopic(topic: Topic.finance, isSelected: false),
+        SelectableTopic(topic: Topic.entertainment, isSelected: false),
+        SelectableTopic(topic: Topic.politics, isSelected: false),
+        SelectableTopic(topic: Topic.business, isSelected: false),
+        SelectableTopic(topic: Topic.economics, isSelected: false),
+        SelectableTopic(topic: Topic.world, isSelected: false),
+        SelectableTopic(topic: Topic.beauty, isSelected: false),
+        SelectableTopic(topic: Topic.travel, isSelected: false),
+        SelectableTopic(topic: Topic.music, isSelected: false),
+        SelectableTopic(topic: Topic.food, isSelected: false),
+        SelectableTopic(topic: Topic.science, isSelected: false),
+        SelectableTopic(topic: Topic.gaming, isSelected: false),
+        SelectableTopic(topic: Topic.energy, isSelected: false)
+    ]
     
     func getHeadlines(for topic: SelectableTopic) async {
         let endpoint = NewsEndpoint(selectableTopic: topic)
@@ -33,8 +49,12 @@ class NewsManager: ObservableObject {
         }
     }
     
-    func isTopicSelected(_ selectedTopic: SelectableTopic) -> Bool {
-        return (selectedTopics.first { ($0.topic.rawValue == selectedTopic.topic.rawValue) && $0.isSelected } != nil)
+    func numberOfSelectedTopics() -> Int {
+        return allTopics.filter { $0.isSelected }.count
+    }
+    
+    func selectedTopics() -> [SelectableTopic] {
+        return allTopics.filter {$0.isSelected}
     }
     
     func publishNews(json: ResponseJSON) {

@@ -29,7 +29,7 @@ struct AnotherNewsAppApp: App {
                         print("Now saving...")
                         Task {
                             do {
-                                try await manager.save(topics: manager.selectedTopics)
+                                try await manager.save(topics: manager.allTopics)
                             } catch {
                                 fatalError(error.localizedDescription)
                             }

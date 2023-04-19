@@ -19,14 +19,9 @@ struct FeedPersonalizationView: View {
                         .fontWeight(.bold)
                         .padding()
                     
-                    LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-                        ForEach(NewsManager.allTopics) { topic in
-                            InterestsSelectionView(selectableTopic: topic, manager: manager)
-                        }
-                    }
-                    .padding()
+                    InterestsSelectionView(manager: manager)
                     
-                    Text(manager.selectedTopics.count < K.minimumTopicsSelected  ? K.noItemsSelectedText : "")
+                    Text(manager.numberOfSelectedTopics() < K.minimumTopicsSelected  ? K.noItemsSelectedText : K.EMPTY_STRING)
                         .padding()
                 }
             }
@@ -36,7 +31,7 @@ struct FeedPersonalizationView: View {
             } label: {
                 FooterButtonView(title: K.continueButton)
             }
-            .disabled(manager.selectedTopics.count < K.minimumTopicsSelected)
+            .disabled(manager.numberOfSelectedTopics() < K.minimumTopicsSelected)
         }
         .navigationBarBackButtonHidden(true)
         .navigationTitle(K.appTitle)

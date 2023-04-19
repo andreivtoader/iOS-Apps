@@ -9,10 +9,11 @@ import SwiftUI
 
 struct NewsFeedView: View {
     @ObservedObject var manager: NewsManager
+    @State private var currentSelection = 0
     
     var body: some View {
         VStack {
-            TabBarView(manager: manager)
+            TabBarView(manager: manager, currentTabSelection: $currentSelection)
 
             NavigationStack {
                 List {
@@ -32,9 +33,9 @@ struct NewsFeedView: View {
                 
         }
         .task {
-            let topic = Topic(rawValue: manager.selectedTopics[manager.selectedTopicIndex].topic.rawValue)!
+            let topic = Topic(rawValue: manager.selectedTopics()[currentSelection].topic.rawValue)!
             let selectableTopic = SelectableTopic(topic: topic, isSelected: false)
-            
+
             await manager.getHeadlines(for: selectableTopic)
         }
         .navigationBarBackButtonHidden(true)
