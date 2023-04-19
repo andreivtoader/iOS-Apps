@@ -10,6 +10,7 @@ import SwiftUI
 struct TabBarView: View {
     @ObservedObject var manager: NewsManager
     @Binding var currentTabSelection: Int
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         ScrollViewReader { scrollView in
@@ -21,7 +22,7 @@ struct TabBarView: View {
                             .padding(.horizontal)
                             .padding(.vertical, 4)
                             .foregroundColor(currentTabSelection == index ? .white : .black)
-                            .background(Capsule().foregroundColor(currentTabSelection == index ? .black : .clear))
+                            .background(Capsule().foregroundColor(currentTabSelection == index ? .black : .white))
                             .onTapGesture {
                                 withAnimation(.easeInOut) {
                                     currentTabSelection = index

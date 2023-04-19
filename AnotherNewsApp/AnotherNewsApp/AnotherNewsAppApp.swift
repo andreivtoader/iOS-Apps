@@ -17,7 +17,6 @@ struct AnotherNewsAppApp: App {
             WelcomeView(manager: manager)
                 .padding()
                 .task {
-                    print("Now loading...")
                     do {
                         try await manager.load()
                     } catch {
@@ -26,7 +25,6 @@ struct AnotherNewsAppApp: App {
                 }
                 .onChange(of: scenePhase) { phase in
                     if phase == .inactive {
-                        print("Now saving...")
                         Task {
                             do {
                                 try await manager.save(topics: manager.allTopics)

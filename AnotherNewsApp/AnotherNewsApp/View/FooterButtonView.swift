@@ -9,15 +9,16 @@ import SwiftUI
 
 struct FooterButtonView: View {
     let title: String
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         Text(title)
             .frame(maxWidth: .infinity)
             .font(.callout)
-            .foregroundColor(.white)
+            .foregroundColor(colorScheme == .dark ? .black : .white)
             .multilineTextAlignment(.center)
             .padding()
-            .background(Color(uiColor: .black))
+            .background(Color(uiColor: colorScheme == .dark ? .white : .black))
             .cornerRadius(30)
             .padding()
     }
