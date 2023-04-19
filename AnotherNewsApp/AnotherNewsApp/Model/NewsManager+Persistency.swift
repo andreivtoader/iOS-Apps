@@ -32,7 +32,7 @@ extension NewsManager {
                     SelectableTopic(topic: Topic.energy, isSelected: false)
                 ]
             }
-            print("URL: \(url)")
+            
             let topics = try JSONDecoder().decode([SelectableTopic].self, from: data)
             return topics
         }
