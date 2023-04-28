@@ -9,44 +9,16 @@ import Foundation
 
 class NewsManager: ObservableObject {
     
-    private var newsResponse = ResponseJSON()
+    private let apiClient = ApiClient()
     
     @Published var filteredArticles = [ArticleUI]()
-    @Published var allTopics: [SelectableTopic] = [
-        SelectableTopic(topic: Topic.news, isSelected: false),
-        SelectableTopic(topic: Topic.sport, isSelected: false),
-        SelectableTopic(topic: Topic.tech, isSelected: false),
-        SelectableTopic(topic: Topic.finance, isSelected: false),
-        SelectableTopic(topic: Topic.entertainment, isSelected: false),
-        SelectableTopic(topic: Topic.politics, isSelected: false),
-        SelectableTopic(topic: Topic.business, isSelected: false),
-        SelectableTopic(topic: Topic.economics, isSelected: false),
-        SelectableTopic(topic: Topic.world, isSelected: false),
-        SelectableTopic(topic: Topic.beauty, isSelected: false),
-        SelectableTopic(topic: Topic.travel, isSelected: false),
-        SelectableTopic(topic: Topic.music, isSelected: false),
-        SelectableTopic(topic: Topic.food, isSelected: false),
-        SelectableTopic(topic: Topic.science, isSelected: false),
-        SelectableTopic(topic: Topic.gaming, isSelected: false),
-        SelectableTopic(topic: Topic.energy, isSelected: false)
-    ]
+    @Published var allTopics: [SelectableTopic] = K.initialData
     
     func getHeadlines(for topic: SelectableTopic) async {
-        let endpoint = NewsEndpoint(selectableTopic: topic)
+        let newsEndpoint = NewsEndpoint(selectableTopic: topic)
+        let result = await apiClient.fetchResourcesSync(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
         
-        guard let url = endpoint.url else {
-            print("URL cannot be built.")
-            return
-        }
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let newsJSON = try JSONDecoder().decode(ResponseJSON.self, from: data)
-            
-            publishNews(json: newsJSON)
-        } catch {
-            print("Error getting results from URLSession: \(error)")
-        }
+        headlinesReceived(result)
     }
     
     func numberOfSelectedTopics() -> Int {
@@ -57,7 +29,16 @@ class NewsManager: ObservableObject {
         return allTopics.filter {$0.isSelected}
     }
     
-    func publishNews(json: ResponseJSON) {
+    private func headlinesReceived(_ result: Result<ResponseJSON, ApiError>) {
+        switch result {
+            case .success(let newsJSON):
+                publishNews(json: newsJSON)
+            case .failure(let error):
+                print("Error: \(error)")
+        }
+    }
+    
+    private func publishNews(json: ResponseJSON) {
         DispatchQueue.main.async {
             self.filteredArticles = json.articles.filter { $0.title != nil && $0.author != nil && $0.publishedAt != nil && $0.description != nil && $0.url != nil && $0.urlToImage != nil}.map { (article) -> ArticleUI in
                 

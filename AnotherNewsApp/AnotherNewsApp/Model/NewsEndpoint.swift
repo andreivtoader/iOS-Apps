@@ -28,6 +28,4 @@ struct NewsEndpoint: Endpoint {
             URLQueryItem(name: "apiKey", value: self.key)
         ]
     }
-    
-    
 }
