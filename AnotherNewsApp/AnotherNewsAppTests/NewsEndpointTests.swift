@@ -25,13 +25,13 @@ final class NewsEndpointTests: XCTestCase {
     }
     
     func testEndpointResultsReceived() async {
-        let results = await apiClient.fetchResourcesSync(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
+        let results = await apiClient.fetchResources(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
         
         XCTAssertNotNil(results)
     }
     
     func testEndpointContainsArticles() async {
-        let results = await apiClient.fetchResourcesSync(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
+        let results = await apiClient.fetchResources(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
         
         switch results {
             case .success(let json):
@@ -42,7 +42,7 @@ final class NewsEndpointTests: XCTestCase {
     }
     
     func testEndpointEveryArticleContainsDescription() async {
-        let results = await apiClient.fetchResourcesSync(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
+        let results = await apiClient.fetchResources(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
         
         switch results {
             case .success(let json):

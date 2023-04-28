@@ -9,7 +9,7 @@ import Foundation
 
 class ApiClient {
     
-    func fetchResourcesSync<T>(endpoint: Endpoint) async -> (Result<T, ApiError>) where T : Codable {
+    func fetchResources<T>(endpoint: Endpoint) async -> (Result<T, ApiError>) where T : Codable {
         
         guard let url = endpoint.url else {
             return .failure(.couldNotConnectToHost)

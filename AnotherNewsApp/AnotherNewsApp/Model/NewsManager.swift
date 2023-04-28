@@ -16,7 +16,7 @@ class NewsManager: ObservableObject {
     
     func getHeadlines(for topic: SelectableTopic) async {
         let newsEndpoint = NewsEndpoint(selectableTopic: topic)
-        let result = await apiClient.fetchResourcesSync(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
+        let result = await apiClient.fetchResources(endpoint: newsEndpoint) as Result<ResponseJSON, ApiError>
         
         headlinesReceived(result)
     }
