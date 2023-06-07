@@ -1,0 +1,1125 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		391A8BEE2A272DC700C29D6A /* EmptyRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BED2A272DC700C29D6A /* EmptyRidesView.swift */; };
+		391A8BF02A272E9300C29D6A /* RidesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BEF2A272E9300C29D6A /* RidesListView.swift */; };
+		391A8BF22A272EDB00C29D6A /* AddRideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BF12A272EDB00C29D6A /* AddRideView.swift */; };
+		391A8BF42A27568200C29D6A /* LabeledToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BF32A27568200C29D6A /* LabeledToggleButton.swift */; };
+		391A8BF62A275B7D00C29D6A /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BF52A275B7D00C29D6A /* Duration.swift */; };
+		391A8BF92A275CBC00C29D6A /* DateDurationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BF82A275CBC00C29D6A /* DateDurationPicker.swift */; };
+		391A8BFB2A275D8B00C29D6A /* PickerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BFA2A275D8B00C29D6A /* PickerType.swift */; };
+		391A8BFD2A27C08E00C29D6A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391A8BFC2A27C08E00C29D6A /* CardView.swift */; };
+		392A2BFF2A2CCEE200BA88FC /* DropdownSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392A2BFE2A2CCEE200BA88FC /* DropdownSelectable.swift */; };
+		392A2C012A2D038600BA88FC /* Array+DropdownSelectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392A2C002A2D038600BA88FC /* Array+DropdownSelectable.swift */; };
+		3935A6172A28AE5700D1B458 /* BikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3935A6162A28AE5700D1B458 /* BikeView.swift */; };
+		3935A61D2A28CC7600D1B458 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 3935A61C2A28CC7600D1B458 /* PopupView */; };
+		3935A61F2A2B163500D1B458 /* RideCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3935A61E2A2B163500D1B458 /* RideCardView.swift */; };
+		3935A6212A2B2A8200D1B458 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3935A6202A2B2A8200D1B458 /* NavigationButton.swift */; };
+		3935A6232A2B33A900D1B458 /* BikeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3935A6222A2B33A900D1B458 /* BikeDetailsView.swift */; };
+		393DFC162A2B53570048F639 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC152A2B53570048F639 /* ProgressBarView.swift */; };
+		393DFC192A2B6E8B0048F639 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC182A2B6E8B0048F639 /* FormView.swift */; };
+		393DFC1B2A2B785D0048F639 /* FormSectionTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC1A2A2B785D0048F639 /* FormSectionTitleView.swift */; };
+		393DFC1D2A2BDAE70048F639 /* GenericOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC1C2A2BDAE70048F639 /* GenericOptions.swift */; };
+		393DFC202A2C62B40048F639 /* FormValidator in Frameworks */ = {isa = PBXBuildFile; productRef = 393DFC1F2A2C62B40048F639 /* FormValidator */; };
+		393DFC232A2C752A0048F639 /* LabelSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC222A2C752A0048F639 /* LabelSectionView.swift */; };
+		393DFC252A2C75CF0048F639 /* TextfieldSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC242A2C75CF0048F639 /* TextfieldSectionView.swift */; };
+		393DFC272A2C78B10048F639 /* TextfieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC262A2C78B10048F639 /* TextfieldType.swift */; };
+		393DFC2A2A2C7C640048F639 /* TextfieldUIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC292A2C7C640048F639 /* TextfieldUIConfiguration.swift */; };
+		393DFC2E2A2C7FD00048F639 /* DropdownSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC2D2A2C7FD00048F639 /* DropdownSectionView.swift */; };
+		393DFC332A2C82E50048F639 /* DurationSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC322A2C82E50048F639 /* DurationSectionView.swift */; };
+		393DFC362A2C856E0048F639 /* DateSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC352A2C856E0048F639 /* DateSectionView.swift */; };
+		393DFC382A2C8E830048F639 /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC372A2C8E830048F639 /* LoadingScreenView.swift */; };
+		393DFC3A2A2CC56B0048F639 /* SettingsFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC392A2CC56B0048F639 /* SettingsFormView.swift */; };
+		393DFC3C2A2CC6D10048F639 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393DFC3B2A2CC6D10048F639 /* SettingsManager.swift */; };
+		398114632A264A44009FACBA /* MobileChallengeGarminApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114622A264A44009FACBA /* MobileChallengeGarminApp.swift */; };
+		398114652A264A44009FACBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114642A264A44009FACBA /* ContentView.swift */; };
+		398114672A264A45009FACBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398114662A264A45009FACBA /* Assets.xcassets */; };
+		3981146A2A264A45009FACBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 398114692A264A45009FACBA /* Preview Assets.xcassets */; };
+		398114742A264A45009FACBA /* MobileChallengeGarminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114732A264A45009FACBA /* MobileChallengeGarminTests.swift */; };
+		3981147E2A264A45009FACBA /* MobileChallengeGarminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3981147D2A264A45009FACBA /* MobileChallengeGarminUITests.swift */; };
+		398114802A264A45009FACBA /* MobileChallengeGarminUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3981147F2A264A45009FACBA /* MobileChallengeGarminUITestsLaunchTests.swift */; };
+		398114922A264BBC009FACBA /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114912A264BBC009FACBA /* DistanceUnit.swift */; };
+		398114942A264BF2009FACBA /* Bike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114932A264BF2009FACBA /* Bike.swift */; };
+		398114962A264C08009FACBA /* BikeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114952A264C08009FACBA /* BikeType.swift */; };
+		398114982A264C57009FACBA /* WheelSizeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114972A264C57009FACBA /* WheelSizeType.swift */; };
+		3981149A2A264D0E009FACBA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114992A264D0E009FACBA /* Settings.swift */; };
+		3981149C2A264D3F009FACBA /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3981149B2A264D3F009FACBA /* Ride.swift */; };
+		3981149E2A264D78009FACBA /* BikeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3981149D2A264D78009FACBA /* BikeManager.swift */; };
+		398114A12A264F50009FACBA /* StatefulTabView in Frameworks */ = {isa = PBXBuildFile; productRef = 398114A02A264F50009FACBA /* StatefulTabView */; };
+		398114A82A2652C5009FACBA /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114A72A2652C5009FACBA /* AppTabView.swift */; };
+		398114AA2A26533F009FACBA /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114A92A26533F009FACBA /* K.swift */; };
+		398114AC2A2653AD009FACBA /* BikesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114AB2A2653AD009FACBA /* BikesTabView.swift */; };
+		398114AE2A2653B8009FACBA /* RidesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114AD2A2653B7009FACBA /* RidesTabView.swift */; };
+		398114B02A2653C2009FACBA /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114AF2A2653C2009FACBA /* SettingsTabView.swift */; };
+		398114B22A2653EC009FACBA /* TabMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114B12A2653EC009FACBA /* TabMenuItem.swift */; };
+		398114B42A2656B7009FACBA /* TabMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114B32A2656B7009FACBA /* TabMenuItemView.swift */; };
+		398114B62A2656FB009FACBA /* TabMenuItemText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114B52A2656FB009FACBA /* TabMenuItemText.swift */; };
+		398114B92A265B36009FACBA /* MissingBikeTextDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114B82A265B36009FACBA /* MissingBikeTextDescription.swift */; };
+		398114BB2A265BC0009FACBA /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114BA2A265BC0009FACBA /* AddButtonView.swift */; };
+		398114BE2A265C65009FACBA /* AddBikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114BD2A265C65009FACBA /* AddBikeView.swift */; };
+		398114C02A265E94009FACBA /* EmptyBikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114BF2A265E94009FACBA /* EmptyBikesView.swift */; };
+		398114C22A265E9F009FACBA /* BikesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114C12A265E9F009FACBA /* BikesListView.swift */; };
+		398114C72A266CC3009FACBA /* GenericDropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114C62A266CC3009FACBA /* GenericDropdownMenu.swift */; };
+		398114C92A266DDC009FACBA /* DropdownTextTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114C82A266DDC009FACBA /* DropdownTextTitle.swift */; };
+		398114CB2A266F4A009FACBA /* DropdownInputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114CA2A266F4A009FACBA /* DropdownInputText.swift */; };
+		398114CF2A26746A009FACBA /* SettingsPageTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114CE2A26746A009FACBA /* SettingsPageTitleText.swift */; };
+		398114D12A26780D009FACBA /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114D02A26780D009FACBA /* DropdownMenu.swift */; };
+		398114D42A267A6D009FACBA /* ToggleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114D32A267A6D009FACBA /* ToggleTextField.swift */; };
+		398114D62A267B01009FACBA /* NumericTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114D52A267B01009FACBA /* NumericTextField.swift */; };
+		398114D82A267BD9009FACBA /* View+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114D72A267BD9009FACBA /* View+HideKeyboard.swift */; };
+		398114DB2A267F82009FACBA /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 398114DA2A267F82009FACBA /* ACarousel */; };
+		398114E02A2684B7009FACBA /* CarouselTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114DF2A2684B7009FACBA /* CarouselTitleView.swift */; };
+		398114E42A2688C2009FACBA /* CarouselPaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114E32A2688C2009FACBA /* CarouselPaginationView.swift */; };
+		398114E62A270AB2009FACBA /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114E52A270AB2009FACBA /* CustomColor.swift */; };
+		398114E92A27111E009FACBA /* CarouselStack in Frameworks */ = {isa = PBXBuildFile; productRef = 398114E82A27111E009FACBA /* CarouselStack */; };
+		398114EB2A27111E009FACBA /* ShuffleDeck in Frameworks */ = {isa = PBXBuildFile; productRef = 398114EA2A27111E009FACBA /* ShuffleDeck */; };
+		398114ED2A27111E009FACBA /* ShuffleIt in Frameworks */ = {isa = PBXBuildFile; productRef = 398114EC2A27111E009FACBA /* ShuffleIt */; };
+		398114EF2A27111E009FACBA /* ShuffleStack in Frameworks */ = {isa = PBXBuildFile; productRef = 398114EE2A27111E009FACBA /* ShuffleStack */; };
+		398114F12A2712BA009FACBA /* BikeCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114F02A2712BA009FACBA /* BikeCarouselView.swift */; };
+		398114F32A27136E009FACBA /* ColorCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114F22A27136E009FACBA /* ColorCarouselView.swift */; };
+		398114F52A271FFF009FACBA /* TextfieldWithSuffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398114F42A271FFF009FACBA /* TextfieldWithSuffix.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		398114702A264A45009FACBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 398114572A264A44009FACBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3981145E2A264A44009FACBA;
+			remoteInfo = MobileChallengeGarmin;
+		};
+		3981147A2A264A45009FACBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 398114572A264A44009FACBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3981145E2A264A44009FACBA;
+			remoteInfo = MobileChallengeGarmin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		391A8BED2A272DC700C29D6A /* EmptyRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRidesView.swift; sourceTree = "<group>"; };
+		391A8BEF2A272E9300C29D6A /* RidesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesListView.swift; sourceTree = "<group>"; };
+		391A8BF12A272EDB00C29D6A /* AddRideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRideView.swift; sourceTree = "<group>"; };
+		391A8BF32A27568200C29D6A /* LabeledToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledToggleButton.swift; sourceTree = "<group>"; };
+		391A8BF52A275B7D00C29D6A /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		391A8BF82A275CBC00C29D6A /* DateDurationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDurationPicker.swift; sourceTree = "<group>"; };
+		391A8BFA2A275D8B00C29D6A /* PickerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerType.swift; sourceTree = "<group>"; };
+		391A8BFC2A27C08E00C29D6A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		392A2BFE2A2CCEE200BA88FC /* DropdownSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelectable.swift; sourceTree = "<group>"; };
+		392A2C002A2D038600BA88FC /* Array+DropdownSelectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+DropdownSelectable.swift"; sourceTree = "<group>"; };
+		3935A6162A28AE5700D1B458 /* BikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeView.swift; sourceTree = "<group>"; };
+		3935A61A2A28CAF900D1B458 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3935A61E2A2B163500D1B458 /* RideCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCardView.swift; sourceTree = "<group>"; };
+		3935A6202A2B2A8200D1B458 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		3935A6222A2B33A900D1B458 /* BikeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeDetailsView.swift; sourceTree = "<group>"; };
+		393DFC152A2B53570048F639 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		393DFC182A2B6E8B0048F639 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		393DFC1A2A2B785D0048F639 /* FormSectionTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSectionTitleView.swift; sourceTree = "<group>"; };
+		393DFC1C2A2BDAE70048F639 /* GenericOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericOptions.swift; sourceTree = "<group>"; };
+		393DFC222A2C752A0048F639 /* LabelSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSectionView.swift; sourceTree = "<group>"; };
+		393DFC242A2C75CF0048F639 /* TextfieldSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldSectionView.swift; sourceTree = "<group>"; };
+		393DFC262A2C78B10048F639 /* TextfieldType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldType.swift; sourceTree = "<group>"; };
+		393DFC292A2C7C640048F639 /* TextfieldUIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldUIConfiguration.swift; sourceTree = "<group>"; };
+		393DFC2D2A2C7FD00048F639 /* DropdownSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSectionView.swift; sourceTree = "<group>"; };
+		393DFC322A2C82E50048F639 /* DurationSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationSectionView.swift; sourceTree = "<group>"; };
+		393DFC352A2C856E0048F639 /* DateSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSectionView.swift; sourceTree = "<group>"; };
+		393DFC372A2C8E830048F639 /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
+		393DFC392A2CC56B0048F639 /* SettingsFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFormView.swift; sourceTree = "<group>"; };
+		393DFC3B2A2CC6D10048F639 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		3981145F2A264A44009FACBA /* MobileChallengeGarmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileChallengeGarmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		398114622A264A44009FACBA /* MobileChallengeGarminApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileChallengeGarminApp.swift; sourceTree = "<group>"; };
+		398114642A264A44009FACBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		398114662A264A45009FACBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		398114692A264A45009FACBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3981146F2A264A45009FACBA /* MobileChallengeGarminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileChallengeGarminTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		398114732A264A45009FACBA /* MobileChallengeGarminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileChallengeGarminTests.swift; sourceTree = "<group>"; };
+		398114792A264A45009FACBA /* MobileChallengeGarminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileChallengeGarminUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3981147D2A264A45009FACBA /* MobileChallengeGarminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileChallengeGarminUITests.swift; sourceTree = "<group>"; };
+		3981147F2A264A45009FACBA /* MobileChallengeGarminUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileChallengeGarminUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		398114912A264BBC009FACBA /* DistanceUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
+		398114932A264BF2009FACBA /* Bike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bike.swift; sourceTree = "<group>"; };
+		398114952A264C08009FACBA /* BikeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeType.swift; sourceTree = "<group>"; };
+		398114972A264C57009FACBA /* WheelSizeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSizeType.swift; sourceTree = "<group>"; };
+		398114992A264D0E009FACBA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3981149B2A264D3F009FACBA /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		3981149D2A264D78009FACBA /* BikeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeManager.swift; sourceTree = "<group>"; };
+		398114A72A2652C5009FACBA /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		398114A92A26533F009FACBA /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		398114AB2A2653AD009FACBA /* BikesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesTabView.swift; sourceTree = "<group>"; };
+		398114AD2A2653B7009FACBA /* RidesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesTabView.swift; sourceTree = "<group>"; };
+		398114AF2A2653C2009FACBA /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
+		398114B12A2653EC009FACBA /* TabMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuItem.swift; sourceTree = "<group>"; };
+		398114B32A2656B7009FACBA /* TabMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuItemView.swift; sourceTree = "<group>"; };
+		398114B52A2656FB009FACBA /* TabMenuItemText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuItemText.swift; sourceTree = "<group>"; };
+		398114B82A265B36009FACBA /* MissingBikeTextDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingBikeTextDescription.swift; sourceTree = "<group>"; };
+		398114BA2A265BC0009FACBA /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
+		398114BD2A265C65009FACBA /* AddBikeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBikeView.swift; sourceTree = "<group>"; };
+		398114BF2A265E94009FACBA /* EmptyBikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyBikesView.swift; sourceTree = "<group>"; };
+		398114C12A265E9F009FACBA /* BikesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesListView.swift; sourceTree = "<group>"; };
+		398114C62A266CC3009FACBA /* GenericDropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericDropdownMenu.swift; sourceTree = "<group>"; };
+		398114C82A266DDC009FACBA /* DropdownTextTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTextTitle.swift; sourceTree = "<group>"; };
+		398114CA2A266F4A009FACBA /* DropdownInputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownInputText.swift; sourceTree = "<group>"; };
+		398114CE2A26746A009FACBA /* SettingsPageTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageTitleText.swift; sourceTree = "<group>"; };
+		398114D02A26780D009FACBA /* DropdownMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenu.swift; sourceTree = "<group>"; };
+		398114D32A267A6D009FACBA /* ToggleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleTextField.swift; sourceTree = "<group>"; };
+		398114D52A267B01009FACBA /* NumericTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericTextField.swift; sourceTree = "<group>"; };
+		398114D72A267BD9009FACBA /* View+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+HideKeyboard.swift"; sourceTree = "<group>"; };
+		398114DF2A2684B7009FACBA /* CarouselTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTitleView.swift; sourceTree = "<group>"; };
+		398114E32A2688C2009FACBA /* CarouselPaginationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPaginationView.swift; sourceTree = "<group>"; };
+		398114E52A270AB2009FACBA /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		398114F02A2712BA009FACBA /* BikeCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeCarouselView.swift; sourceTree = "<group>"; };
+		398114F22A27136E009FACBA /* ColorCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCarouselView.swift; sourceTree = "<group>"; };
+		398114F42A271FFF009FACBA /* TextfieldWithSuffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithSuffix.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3981145C2A264A44009FACBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				398114ED2A27111E009FACBA /* ShuffleIt in Frameworks */,
+				3935A61D2A28CC7600D1B458 /* PopupView in Frameworks */,
+				398114DB2A267F82009FACBA /* ACarousel in Frameworks */,
+				398114A12A264F50009FACBA /* StatefulTabView in Frameworks */,
+				398114E92A27111E009FACBA /* CarouselStack in Frameworks */,
+				398114EB2A27111E009FACBA /* ShuffleDeck in Frameworks */,
+				398114EF2A27111E009FACBA /* ShuffleStack in Frameworks */,
+				393DFC202A2C62B40048F639 /* FormValidator in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3981146C2A264A45009FACBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		398114762A264A45009FACBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		391A8BF72A275CAE00C29D6A /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				391A8BF82A275CBC00C29D6A /* DateDurationPicker.swift */,
+				391A8BFA2A275D8B00C29D6A /* PickerType.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		393DFC172A2B6E7E0048F639 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC212A2C750E0048F639 /* Sections */,
+				393DFC182A2B6E8B0048F639 /* FormView.swift */,
+				393DFC1A2A2B785D0048F639 /* FormSectionTitleView.swift */,
+				393DFC392A2CC56B0048F639 /* SettingsFormView.swift */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
+		393DFC212A2C750E0048F639 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC342A2C85620048F639 /* Date */,
+				393DFC312A2C82CA0048F639 /* Duration */,
+				393DFC2C2A2C7EEA0048F639 /* Dropdown */,
+				393DFC2B2A2C7EDE0048F639 /* Label */,
+				393DFC282A2C7C480048F639 /* Textfield */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		393DFC282A2C7C480048F639 /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				398114D72A267BD9009FACBA /* View+HideKeyboard.swift */,
+				393DFC262A2C78B10048F639 /* TextfieldType.swift */,
+				393DFC242A2C75CF0048F639 /* TextfieldSectionView.swift */,
+				393DFC292A2C7C640048F639 /* TextfieldUIConfiguration.swift */,
+			);
+			path = Textfield;
+			sourceTree = "<group>";
+		};
+		393DFC2B2A2C7EDE0048F639 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC222A2C752A0048F639 /* LabelSectionView.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		393DFC2C2A2C7EEA0048F639 /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC1C2A2BDAE70048F639 /* GenericOptions.swift */,
+				393DFC2D2A2C7FD00048F639 /* DropdownSectionView.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
+		393DFC312A2C82CA0048F639 /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC322A2C82E50048F639 /* DurationSectionView.swift */,
+			);
+			path = Duration;
+			sourceTree = "<group>";
+		};
+		393DFC342A2C85620048F639 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC352A2C856E0048F639 /* DateSectionView.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		398114562A264A44009FACBA = {
+			isa = PBXGroup;
+			children = (
+				398114612A264A44009FACBA /* MobileChallengeGarmin */,
+				398114722A264A45009FACBA /* MobileChallengeGarminTests */,
+				3981147C2A264A45009FACBA /* MobileChallengeGarminUITests */,
+				398114602A264A44009FACBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		398114602A264A44009FACBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3981145F2A264A44009FACBA /* MobileChallengeGarmin.app */,
+				3981146F2A264A45009FACBA /* MobileChallengeGarminTests.xctest */,
+				398114792A264A45009FACBA /* MobileChallengeGarminUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		398114612A264A44009FACBA /* MobileChallengeGarmin */ = {
+			isa = PBXGroup;
+			children = (
+				3935A61A2A28CAF900D1B458 /* Info.plist */,
+				3981148C2A264AD3009FACBA /* Models */,
+				3981148D2A264ADE009FACBA /* Views */,
+				398114622A264A44009FACBA /* MobileChallengeGarminApp.swift */,
+				398114662A264A45009FACBA /* Assets.xcassets */,
+				398114682A264A45009FACBA /* Preview Content */,
+			);
+			path = MobileChallengeGarmin;
+			sourceTree = "<group>";
+		};
+		398114682A264A45009FACBA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				398114692A264A45009FACBA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		398114722A264A45009FACBA /* MobileChallengeGarminTests */ = {
+			isa = PBXGroup;
+			children = (
+				398114732A264A45009FACBA /* MobileChallengeGarminTests.swift */,
+			);
+			path = MobileChallengeGarminTests;
+			sourceTree = "<group>";
+		};
+		3981147C2A264A45009FACBA /* MobileChallengeGarminUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3981147D2A264A45009FACBA /* MobileChallengeGarminUITests.swift */,
+				3981147F2A264A45009FACBA /* MobileChallengeGarminUITestsLaunchTests.swift */,
+			);
+			path = MobileChallengeGarminUITests;
+			sourceTree = "<group>";
+		};
+		3981148C2A264AD3009FACBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				398114902A264BA2009FACBA /* Settings */,
+				3981148F2A264B9A009FACBA /* Ride */,
+				3981148E2A264B93009FACBA /* Bike */,
+				3981149D2A264D78009FACBA /* BikeManager.swift */,
+				398114A92A26533F009FACBA /* K.swift */,
+				392A2BFE2A2CCEE200BA88FC /* DropdownSelectable.swift */,
+				392A2C002A2D038600BA88FC /* Array+DropdownSelectable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3981148D2A264ADE009FACBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				393DFC172A2B6E7E0048F639 /* Forms */,
+				398114D22A267A24009FACBA /* Textfields */,
+				398114C52A266CB2009FACBA /* Dropdown */,
+				398114BC2A265BC5009FACBA /* Buttons */,
+				398114A62A2650FA009FACBA /* TabView */,
+				398114642A264A44009FACBA /* ContentView.swift */,
+				393DFC372A2C8E830048F639 /* LoadingScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3981148E2A264B93009FACBA /* Bike */ = {
+			isa = PBXGroup;
+			children = (
+				398114932A264BF2009FACBA /* Bike.swift */,
+				398114952A264C08009FACBA /* BikeType.swift */,
+				398114972A264C57009FACBA /* WheelSizeType.swift */,
+				398114E52A270AB2009FACBA /* CustomColor.swift */,
+			);
+			path = Bike;
+			sourceTree = "<group>";
+		};
+		3981148F2A264B9A009FACBA /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				3981149B2A264D3F009FACBA /* Ride.swift */,
+				391A8BF52A275B7D00C29D6A /* Duration.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		398114902A264BA2009FACBA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				398114912A264BBC009FACBA /* DistanceUnit.swift */,
+				398114992A264D0E009FACBA /* Settings.swift */,
+				393DFC3B2A2CC6D10048F639 /* SettingsManager.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		398114A62A2650FA009FACBA /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				398114B72A265B18009FACBA /* BikesTab */,
+				398114C32A265F47009FACBA /* RidesTab */,
+				398114C42A265F4F009FACBA /* SettingsTab */,
+				398114A72A2652C5009FACBA /* AppTabView.swift */,
+				398114B52A2656FB009FACBA /* TabMenuItemText.swift */,
+				398114B12A2653EC009FACBA /* TabMenuItem.swift */,
+				398114B32A2656B7009FACBA /* TabMenuItemView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		398114B72A265B18009FACBA /* BikesTab */ = {
+			isa = PBXGroup;
+			children = (
+				398114DC2A267FBC009FACBA /* Carousel */,
+				398114AB2A2653AD009FACBA /* BikesTabView.swift */,
+				398114BF2A265E94009FACBA /* EmptyBikesView.swift */,
+				398114BD2A265C65009FACBA /* AddBikeView.swift */,
+				398114C12A265E9F009FACBA /* BikesListView.swift */,
+				391A8BFC2A27C08E00C29D6A /* CardView.swift */,
+				398114B82A265B36009FACBA /* MissingBikeTextDescription.swift */,
+				3935A6202A2B2A8200D1B458 /* NavigationButton.swift */,
+				3935A6222A2B33A900D1B458 /* BikeDetailsView.swift */,
+				393DFC152A2B53570048F639 /* ProgressBarView.swift */,
+			);
+			path = BikesTab;
+			sourceTree = "<group>";
+		};
+		398114BC2A265BC5009FACBA /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				398114BA2A265BC0009FACBA /* AddButtonView.swift */,
+				391A8BF32A27568200C29D6A /* LabeledToggleButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		398114C32A265F47009FACBA /* RidesTab */ = {
+			isa = PBXGroup;
+			children = (
+				391A8BF72A275CAE00C29D6A /* Form */,
+				398114AD2A2653B7009FACBA /* RidesTabView.swift */,
+				391A8BED2A272DC700C29D6A /* EmptyRidesView.swift */,
+				391A8BEF2A272E9300C29D6A /* RidesListView.swift */,
+				391A8BF12A272EDB00C29D6A /* AddRideView.swift */,
+				3935A61E2A2B163500D1B458 /* RideCardView.swift */,
+			);
+			path = RidesTab;
+			sourceTree = "<group>";
+		};
+		398114C42A265F4F009FACBA /* SettingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				398114AF2A2653C2009FACBA /* SettingsTabView.swift */,
+				398114CE2A26746A009FACBA /* SettingsPageTitleText.swift */,
+			);
+			path = SettingsTab;
+			sourceTree = "<group>";
+		};
+		398114C52A266CB2009FACBA /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				398114C62A266CC3009FACBA /* GenericDropdownMenu.swift */,
+				398114D02A26780D009FACBA /* DropdownMenu.swift */,
+				398114C82A266DDC009FACBA /* DropdownTextTitle.swift */,
+				398114CA2A266F4A009FACBA /* DropdownInputText.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
+		398114D22A267A24009FACBA /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				398114D32A267A6D009FACBA /* ToggleTextField.swift */,
+				398114D52A267B01009FACBA /* NumericTextField.swift */,
+				398114F42A271FFF009FACBA /* TextfieldWithSuffix.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		398114DC2A267FBC009FACBA /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				398114DF2A2684B7009FACBA /* CarouselTitleView.swift */,
+				398114E32A2688C2009FACBA /* CarouselPaginationView.swift */,
+				398114F02A2712BA009FACBA /* BikeCarouselView.swift */,
+				398114F22A27136E009FACBA /* ColorCarouselView.swift */,
+				3935A6162A28AE5700D1B458 /* BikeView.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3981145E2A264A44009FACBA /* MobileChallengeGarmin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 398114832A264A45009FACBA /* Build configuration list for PBXNativeTarget "MobileChallengeGarmin" */;
+			buildPhases = (
+				3981145B2A264A44009FACBA /* Sources */,
+				3981145C2A264A44009FACBA /* Frameworks */,
+				3981145D2A264A44009FACBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileChallengeGarmin;
+			packageProductDependencies = (
+				398114A02A264F50009FACBA /* StatefulTabView */,
+				398114DA2A267F82009FACBA /* ACarousel */,
+				398114E82A27111E009FACBA /* CarouselStack */,
+				398114EA2A27111E009FACBA /* ShuffleDeck */,
+				398114EC2A27111E009FACBA /* ShuffleIt */,
+				398114EE2A27111E009FACBA /* ShuffleStack */,
+				3935A61C2A28CC7600D1B458 /* PopupView */,
+				393DFC1F2A2C62B40048F639 /* FormValidator */,
+			);
+			productName = MobileChallengeGarmin;
+			productReference = 3981145F2A264A44009FACBA /* MobileChallengeGarmin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3981146E2A264A45009FACBA /* MobileChallengeGarminTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 398114862A264A45009FACBA /* Build configuration list for PBXNativeTarget "MobileChallengeGarminTests" */;
+			buildPhases = (
+				3981146B2A264A45009FACBA /* Sources */,
+				3981146C2A264A45009FACBA /* Frameworks */,
+				3981146D2A264A45009FACBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				398114712A264A45009FACBA /* PBXTargetDependency */,
+			);
+			name = MobileChallengeGarminTests;
+			productName = MobileChallengeGarminTests;
+			productReference = 3981146F2A264A45009FACBA /* MobileChallengeGarminTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		398114782A264A45009FACBA /* MobileChallengeGarminUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 398114892A264A45009FACBA /* Build configuration list for PBXNativeTarget "MobileChallengeGarminUITests" */;
+			buildPhases = (
+				398114752A264A45009FACBA /* Sources */,
+				398114762A264A45009FACBA /* Frameworks */,
+				398114772A264A45009FACBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3981147B2A264A45009FACBA /* PBXTargetDependency */,
+			);
+			name = MobileChallengeGarminUITests;
+			productName = MobileChallengeGarminUITests;
+			productReference = 398114792A264A45009FACBA /* MobileChallengeGarminUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		398114572A264A44009FACBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3981145E2A264A44009FACBA = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					3981146E2A264A45009FACBA = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 3981145E2A264A44009FACBA;
+					};
+					398114782A264A45009FACBA = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 3981145E2A264A44009FACBA;
+					};
+				};
+			};
+			buildConfigurationList = 3981145A2A264A44009FACBA /* Build configuration list for PBXProject "MobileChallengeGarmin" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 398114562A264A44009FACBA;
+			packageReferences = (
+				3981149F2A264F50009FACBA /* XCRemoteSwiftPackageReference "StatefulTabView" */,
+				398114D92A267F82009FACBA /* XCRemoteSwiftPackageReference "ACarousel" */,
+				398114E72A27111E009FACBA /* XCRemoteSwiftPackageReference "ShuffleIt" */,
+				3935A61B2A28CC7600D1B458 /* XCRemoteSwiftPackageReference "PopupView" */,
+				393DFC1E2A2C62B40048F639 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */,
+			);
+			productRefGroup = 398114602A264A44009FACBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3981145E2A264A44009FACBA /* MobileChallengeGarmin */,
+				3981146E2A264A45009FACBA /* MobileChallengeGarminTests */,
+				398114782A264A45009FACBA /* MobileChallengeGarminUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3981145D2A264A44009FACBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3981146A2A264A45009FACBA /* Preview Assets.xcassets in Resources */,
+				398114672A264A45009FACBA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3981146D2A264A45009FACBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		398114772A264A45009FACBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3981145B2A264A44009FACBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3935A6172A28AE5700D1B458 /* BikeView.swift in Sources */,
+				3981149E2A264D78009FACBA /* BikeManager.swift in Sources */,
+				398114B02A2653C2009FACBA /* SettingsTabView.swift in Sources */,
+				398114E62A270AB2009FACBA /* CustomColor.swift in Sources */,
+				3935A61F2A2B163500D1B458 /* RideCardView.swift in Sources */,
+				393DFC1B2A2B785D0048F639 /* FormSectionTitleView.swift in Sources */,
+				398114AC2A2653AD009FACBA /* BikesTabView.swift in Sources */,
+				391A8BF62A275B7D00C29D6A /* Duration.swift in Sources */,
+				398114962A264C08009FACBA /* BikeType.swift in Sources */,
+				393DFC272A2C78B10048F639 /* TextfieldType.swift in Sources */,
+				398114D62A267B01009FACBA /* NumericTextField.swift in Sources */,
+				398114F32A27136E009FACBA /* ColorCarouselView.swift in Sources */,
+				3981149C2A264D3F009FACBA /* Ride.swift in Sources */,
+				398114942A264BF2009FACBA /* Bike.swift in Sources */,
+				392A2BFF2A2CCEE200BA88FC /* DropdownSelectable.swift in Sources */,
+				3935A6232A2B33A900D1B458 /* BikeDetailsView.swift in Sources */,
+				398114B42A2656B7009FACBA /* TabMenuItemView.swift in Sources */,
+				398114BE2A265C65009FACBA /* AddBikeView.swift in Sources */,
+				391A8BEE2A272DC700C29D6A /* EmptyRidesView.swift in Sources */,
+				398114AE2A2653B8009FACBA /* RidesTabView.swift in Sources */,
+				398114A82A2652C5009FACBA /* AppTabView.swift in Sources */,
+				398114C02A265E94009FACBA /* EmptyBikesView.swift in Sources */,
+				398114E02A2684B7009FACBA /* CarouselTitleView.swift in Sources */,
+				398114D12A26780D009FACBA /* DropdownMenu.swift in Sources */,
+				393DFC382A2C8E830048F639 /* LoadingScreenView.swift in Sources */,
+				398114B62A2656FB009FACBA /* TabMenuItemText.swift in Sources */,
+				393DFC2A2A2C7C640048F639 /* TextfieldUIConfiguration.swift in Sources */,
+				393DFC232A2C752A0048F639 /* LabelSectionView.swift in Sources */,
+				393DFC252A2C75CF0048F639 /* TextfieldSectionView.swift in Sources */,
+				393DFC3C2A2CC6D10048F639 /* SettingsManager.swift in Sources */,
+				398114982A264C57009FACBA /* WheelSizeType.swift in Sources */,
+				393DFC1D2A2BDAE70048F639 /* GenericOptions.swift in Sources */,
+				398114F52A271FFF009FACBA /* TextfieldWithSuffix.swift in Sources */,
+				398114C22A265E9F009FACBA /* BikesListView.swift in Sources */,
+				398114B22A2653EC009FACBA /* TabMenuItem.swift in Sources */,
+				398114F12A2712BA009FACBA /* BikeCarouselView.swift in Sources */,
+				392A2C012A2D038600BA88FC /* Array+DropdownSelectable.swift in Sources */,
+				393DFC362A2C856E0048F639 /* DateSectionView.swift in Sources */,
+				398114BB2A265BC0009FACBA /* AddButtonView.swift in Sources */,
+				391A8BF22A272EDB00C29D6A /* AddRideView.swift in Sources */,
+				398114CB2A266F4A009FACBA /* DropdownInputText.swift in Sources */,
+				398114B92A265B36009FACBA /* MissingBikeTextDescription.swift in Sources */,
+				3935A6212A2B2A8200D1B458 /* NavigationButton.swift in Sources */,
+				391A8BF42A27568200C29D6A /* LabeledToggleButton.swift in Sources */,
+				391A8BF02A272E9300C29D6A /* RidesListView.swift in Sources */,
+				398114D42A267A6D009FACBA /* ToggleTextField.swift in Sources */,
+				393DFC3A2A2CC56B0048F639 /* SettingsFormView.swift in Sources */,
+				398114AA2A26533F009FACBA /* K.swift in Sources */,
+				398114652A264A44009FACBA /* ContentView.swift in Sources */,
+				391A8BF92A275CBC00C29D6A /* DateDurationPicker.swift in Sources */,
+				393DFC2E2A2C7FD00048F639 /* DropdownSectionView.swift in Sources */,
+				3981149A2A264D0E009FACBA /* Settings.swift in Sources */,
+				398114CF2A26746A009FACBA /* SettingsPageTitleText.swift in Sources */,
+				391A8BFB2A275D8B00C29D6A /* PickerType.swift in Sources */,
+				393DFC162A2B53570048F639 /* ProgressBarView.swift in Sources */,
+				393DFC192A2B6E8B0048F639 /* FormView.swift in Sources */,
+				398114E42A2688C2009FACBA /* CarouselPaginationView.swift in Sources */,
+				398114632A264A44009FACBA /* MobileChallengeGarminApp.swift in Sources */,
+				398114C72A266CC3009FACBA /* GenericDropdownMenu.swift in Sources */,
+				398114C92A266DDC009FACBA /* DropdownTextTitle.swift in Sources */,
+				393DFC332A2C82E50048F639 /* DurationSectionView.swift in Sources */,
+				398114922A264BBC009FACBA /* DistanceUnit.swift in Sources */,
+				391A8BFD2A27C08E00C29D6A /* CardView.swift in Sources */,
+				398114D82A267BD9009FACBA /* View+HideKeyboard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3981146B2A264A45009FACBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				398114742A264A45009FACBA /* MobileChallengeGarminTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		398114752A264A45009FACBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				398114802A264A45009FACBA /* MobileChallengeGarminUITestsLaunchTests.swift in Sources */,
+				3981147E2A264A45009FACBA /* MobileChallengeGarminUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		398114712A264A45009FACBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3981145E2A264A44009FACBA /* MobileChallengeGarmin */;
+			targetProxy = 398114702A264A45009FACBA /* PBXContainerItemProxy */;
+		};
+		3981147B2A264A45009FACBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3981145E2A264A44009FACBA /* MobileChallengeGarmin */;
+			targetProxy = 3981147A2A264A45009FACBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		398114812A264A45009FACBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		398114822A264A45009FACBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		398114842A264A45009FACBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MobileChallengeGarmin/Preview Content\"";
+				DEVELOPMENT_TEAM = YZBDZY8RZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MobileChallengeGarmin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreitoader.MobileChallengeGarmin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		398114852A264A45009FACBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MobileChallengeGarmin/Preview Content\"";
+				DEVELOPMENT_TEAM = YZBDZY8RZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MobileChallengeGarmin/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreitoader.MobileChallengeGarmin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		398114872A264A45009FACBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZBDZY8RZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreitoader.MobileChallengeGarminTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileChallengeGarmin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileChallengeGarmin";
+			};
+			name = Debug;
+		};
+		398114882A264A45009FACBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZBDZY8RZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreitoader.MobileChallengeGarminTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileChallengeGarmin.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileChallengeGarmin";
+			};
+			name = Release;
+		};
+		3981148A2A264A45009FACBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZBDZY8RZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreitoader.MobileChallengeGarminUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileChallengeGarmin;
+			};
+			name = Debug;
+		};
+		3981148B2A264A45009FACBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZBDZY8RZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreitoader.MobileChallengeGarminUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileChallengeGarmin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3981145A2A264A44009FACBA /* Build configuration list for PBXProject "MobileChallengeGarmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				398114812A264A45009FACBA /* Debug */,
+				398114822A264A45009FACBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		398114832A264A45009FACBA /* Build configuration list for PBXNativeTarget "MobileChallengeGarmin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				398114842A264A45009FACBA /* Debug */,
+				398114852A264A45009FACBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		398114862A264A45009FACBA /* Build configuration list for PBXNativeTarget "MobileChallengeGarminTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				398114872A264A45009FACBA /* Debug */,
+				398114882A264A45009FACBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		398114892A264A45009FACBA /* Build configuration list for PBXNativeTarget "MobileChallengeGarminUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3981148A2A264A45009FACBA /* Debug */,
+				3981148B2A264A45009FACBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3935A61B2A28CC7600D1B458 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		393DFC1E2A2C62B40048F639 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Open-Bytes/SwiftUIFormValidator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		3981149F2A264F50009FACBA /* XCRemoteSwiftPackageReference "StatefulTabView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NicholasBellucci/StatefulTabView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.10;
+			};
+		};
+		398114D92A267F82009FACBA /* XCRemoteSwiftPackageReference "ACarousel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JWAutumn/ACarousel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.0;
+			};
+		};
+		398114E72A27111E009FACBA /* XCRemoteSwiftPackageReference "ShuffleIt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dscyrescotti/ShuffleIt.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3935A61C2A28CC7600D1B458 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3935A61B2A28CC7600D1B458 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+		393DFC1F2A2C62B40048F639 /* FormValidator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 393DFC1E2A2C62B40048F639 /* XCRemoteSwiftPackageReference "SwiftUIFormValidator" */;
+			productName = FormValidator;
+		};
+		398114A02A264F50009FACBA /* StatefulTabView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3981149F2A264F50009FACBA /* XCRemoteSwiftPackageReference "StatefulTabView" */;
+			productName = StatefulTabView;
+		};
+		398114DA2A267F82009FACBA /* ACarousel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398114D92A267F82009FACBA /* XCRemoteSwiftPackageReference "ACarousel" */;
+			productName = ACarousel;
+		};
+		398114E82A27111E009FACBA /* CarouselStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398114E72A27111E009FACBA /* XCRemoteSwiftPackageReference "ShuffleIt" */;
+			productName = CarouselStack;
+		};
+		398114EA2A27111E009FACBA /* ShuffleDeck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398114E72A27111E009FACBA /* XCRemoteSwiftPackageReference "ShuffleIt" */;
+			productName = ShuffleDeck;
+		};
+		398114EC2A27111E009FACBA /* ShuffleIt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398114E72A27111E009FACBA /* XCRemoteSwiftPackageReference "ShuffleIt" */;
+			productName = ShuffleIt;
+		};
+		398114EE2A27111E009FACBA /* ShuffleStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 398114E72A27111E009FACBA /* XCRemoteSwiftPackageReference "ShuffleIt" */;
+			productName = ShuffleStack;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 398114572A264A44009FACBA /* Project object */;
+}
